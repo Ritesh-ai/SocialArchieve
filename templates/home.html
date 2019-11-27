@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Facebook Login JavaScript Example</title>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  alert("home");
+
+
+</script>
+  <style type="text/css">
+    #fbLoginBTN {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+    }
+
+    #status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+      font-size: 22px;
+    }
+
+    #adminPagesText {
+      display: flex;
+      margin: 5px;
+      font-size: 22px;
+    }
+
+    #profile {
+
+      background-color: #3B5998 ;
+      margin: 5px;
+      box-shadow: none;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    #post {
+
+      background-color: #3B5998 ;
+      box-shadow: none;
+      color: #fff;
+      margin: 5px;
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    #pages {
+
+      background-color: #3B5998 ;
+      box-shadow: none;
+      color: #fff;
+      margin: 5px;
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+
+    #viewProfile {
+
+      background-color: #32799a;
+      box-shadow: none;
+      color: #fff;
+      margin: 5px;
+      padding: 10px 15px;
+    }
+
+
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      max-width: 300px;
+      margin: auto;
+      margin-top: 30px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .title {
+      color: grey;
+      font-size: 18px;
+    }
+
+
+    button:hover,
+    a:hover {
+      opacity: 0.7;
+    }
+
+    .textcenter {
+      position: absolute;
+      margin-top: 43px;
+    }
+
+    .imgdataset img {
+      padding: 10px 10px 10px 10px;
+      height: 100px;
+      width: 100px;
+
+    }
+
+    /* .imgdataset {
+      padding: 10px 10px 10px 10px;
+      text-align: center;
+
+    } */
+  </style>
+</head>
+
+<body>
+
+  <!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+
+
+
+  <fb:login-button id="fbLoginBTN" scope="public_profile,user_friends,user_photos,user_gender,user_posts,groups_access_member_info
+,user_likes,user_link,user_location,user_tagged_places,user_videos,publish_to_groups,
+user_birthday,user_events,pages_show_list" autologoutlink='true' onlogin="checkLoginState();">
+  </fb:login-button>
+
+
+  <div id="status">
+  </div>
+
+  <div style="text-align: center;">
+    <button id='profile'>Profile</button>
+    <button id='post'>Post</button>
+    <button id='pages'>Pages</button>
+  </div>
+
+  <div id="adminPagesText" >
+  </div>
+
+  <div id="hdr" style="position: absolute;">
+    <a>
+      <img id="page_image" style="border: 0; float: left; margin-right: 15px" />
+      <span id="page_name"> </span>
+    </a>
+  </div>
+
+  <div id="poststag">
+    <a></a>
+    <img id="post_image" style="border: 0; float: left; margin-right: 15px" />
+    <span id="post_message"> </span>
+    </a>
+  </div>
+
+  <div id="profileInfoTag" style="visibility: hidden;margin-top:10px;">
+
+    <div class="card">
+      <img id="profileImage" width="150px" height="150px" src="" alt="John" style="width:50%">
+      <h1 id="userName"></h1>
+      <p id="userId"></p>
+      <p id="userBirthday"></p>
+      <a href="" id="userProfileLink" target="_blank">Show Profile</a>
+      <!-- <button id='viewProfile' onclick="showProfile()">Show Profile</button> -->
+
+    </div>
+
+  </div>
+<!------------------------------------------------------->
+                 	<form method="GET" action=" ">
+                		<div>
+
+                		    <input class="form-control" type="text" rows="5" id="datajson" name="data"/>
+                        </div>
+                		<br>
+                		<div class="text-center">
+                			<button class="trigger-loading btn btn-info">CONTINUE</button>
+                		</div>
+
+                	</form>
+  <!--------------------------------------------------->
+
+  <div class="element"></div>
+
+<!--<script src="{{url_for('static', filename='fb.js')}}"></script>-->
+  <!--<script src="C:\\Users\\Ritesh\\PycharmProjects\\Flask\\venv\\flasknew\\templates\\fb.js"></script>-->
+</body>
+
+</html>
+<script>
+
+</script>

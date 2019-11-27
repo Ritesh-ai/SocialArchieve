@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Social Networking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+       body {
+        text-align: center;
+    }
+    .image-loading {
+        background-color: blue;
+        color: white;
+        width: 200px;
+        height: 100px;
+        margin: 100px auto;
+        text-align: center;
+
+    }
+    .image-loading h3 {
+        padding-top: 30px;
+    }
+    .trigger-loading {
+        margin: 0 auto;
+    }
+    </style>
+</head>
+<body>
+
+<header class="container-fluid">
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">SOCIAL NETWORKING</a>
+        </div>
+        <ul class="nav navbar-nav pull-right">
+            <li><a href="Facebook.html"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="InstaGram.html"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="Twitter.html"><i class="fa fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </nav>
+</header>
+<style type="text/css">
+.Networking1 a{
+	width: 33.33%;
+}
+footer {
+   position: fixed;
+   left: 15px;
+   bottom: 0;
+   width: 97.5%;
+   background-color: #222222;
+   color: white;
+   text-align: center;
+
+}/*.panel_height {
+    min-height: 311px;
+}*/
+</style>
+<div class="image-loading" style="display: none">
+                                <img src="https://socialcateringandevents.com/wp-content/themes/culinier-theme/images/loader.gif">
+                            </div>
+<section class="container" id="data">
+    <div class="cleafix">
+        <div class="col-sm-8">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class=" ">
+                    	<div class="Networking1">
+                    		<div class="btn-group btn-group-justified">
+							    <a type="button" class="btn btn-primary"><span>INSTAGRAM</span> <i class="fa fa-instagram"></i></a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-body">
+                	<div class="text-center">
+                		<a href="https://www.instagram.com/developer/clients/manage/" class="btn btn-link"><h3>Click Here</h3></a>
+                	</div>
+                	<form method="POST" action=" http://127.0.0.1:5000/instaGram/instagramcallback">
+                		<div>
+                			<label>Access Token : </label>
+                            <textarea class="form-control" rows="5" placeholder="Access_Token" name="token"></textarea>
+                			<!--<input class="form-control" type="text" name="token" rows="5" placeholder="Message"></input>-->
+                		</div>
+                		<br>
+                		<div class="text-center">
+                            <!--<input class="btn btn-info" type="Submit" name="submit" value="Submit" />-->
+                			<button class="trigger-loading btn btn-info">CONTINUE</button>
+                		</div>
+                        <script type="text/javascript">
+                        $('.trigger-loading').click(function () {
+                            $(".image-loading").show();
+                            $("#data").hide();
+
+                        });
+                        </script>
+                        <label><u>Dummy Credential For Testing </u>:</label>
+                        <li><strong>ACCESS_TOKEN : </strong>8231587445.4c9486f.6f6278ec003c4e7ab362482ff1615fbc</li>
+                	</form>
+                </div>
+            </div>
+        </div>
+       <div class="col-sm-4">
+            <div class="panel panel-default">
+                <div class="panel-body panel_height">
+                    <h1 style="color:DodgerBlue;" class="text-center "><strong><u>Instructions</u></strong></h1>
+                   <ul>
+                        <li> Click on the link provided.</li>
+                        <li>On the new page click on the <strong>Register a new client</strong> button.</li>
+                        <li>Fill in all the details given on new page.</li> 
+
+                         (Note: Put the value "https://acadview.com/" in  <strong>Valid redirect URIs</strong> field)
+
+                         <li>Click on the <strong>Register</strong> button.</li> 
+                         <li>Click on the <strong>MANAGE</strong> button corresponding to your app name dialog box.</li> 
+                         <li>In the <strong>security</strong> tab click the <strong>Disable implicit OAuth</strong> to disable it.</li> 
+                         <li>Then click on the <strong>Update Client</strong> button at the bottom.</li> 
+                         <li>Click on the <strong>Get Access Token</strong> button to get the access token in the url.</li>
+                          (<strong>Hint:</strong> enter your client Id here): <input type="text" name="client_id" id="client_id"><br>
+
+
+                        <br>
+                        <!--<input type="submit" value="Get Access Token">-->
+                       <button onclick="myFunction()">Get Access Token</button>
+
+                        <script>
+                        function myFunction() {
+                            var clientId = document.getElementById("client_id").value;
+                            window.open("https://www.instagram.com/oauth/authorize/?client_id="+clientId+"&redirect_uri=https://acadview.com/&response_type=token&scope=basic+public_content+likes+comments")
+                        }
+                        </script>
+
+                        <br>
+                         <li>Copy the <strong>access token</strong> from the url and paste in the Access token field.</li> 
+                         <li> Click on <strong>Continue</strong> button.</li> 
+                    </ul> 
+                      
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<br>
+<br><br>
+<br><br><br>
+<br><br> 
+<footer class="container-fluid">
+    
+      <div class="container">
+            <p class="text-center" style="color: #fff;padding-top: 12px;">Copyright @ 2018 SOCIAL NETWORKING. All rights reserved.</p>
+      </div>
+    
+</footer>
+</body>
+</html>
